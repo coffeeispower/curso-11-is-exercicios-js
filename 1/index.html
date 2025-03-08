@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+    Calculadora
+-->
+<html>
+    <head>
+        <title>Calculadora</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+            #calculadora {
+                background-color: #999;
+                text-align: center;
+                width: 200px;
+                margin: 20px auto auto auto;
+                padding: 20px;
+            }
+            input{
+                width: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="calculadora">
+            <form name="f1">
+                <input type="text" name="txtA" />
+                <input type="text" name="txtB" />
+                <br/>
+                <button id="soma">+</button>
+                <button id="menos">-</button>
+                <button id="vezes">*</button>
+                <button id="dividir">/</button>
+                <br/>
+                <input type="text" name="txtResultado" />
+            </form>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>

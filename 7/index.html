@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Área</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: "Inter", serif;
+        }
+        div.form-box {
+            border: 1px rgba(0.0, 0.0, 0.0, 0.1) solid;
+            padding:  16px;
+            border-radius: 0.5rem;
+        }
+        h1 {
+            all: unset;
+            font-weight: 700;
+            font-size: 150%;
+            padding-bottom: 1rem;
+        }
+        input {
+            display: block;
+            border-radius: 0.2rem;
+            border: 1px rgba(0.0, 0.0, 0.0, 0.1) solid;
+            padding: 0.5rem;
+            margin: 1rem 0;
+        }
+        button {
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.2rem;
+            border: 1px rgba(0.0, 0.0, 0.0, 0.1) solid;
+            background: none;
+            font-size: 90%;
+            font-weight: 500;
+            transition: all 125ms ease-out;
+        }
+        button:hover {
+            background-color: rgba(0.0, 0.0, 0.0, 0.1);
+            cursor: pointer;
+        }
+        button:active {
+            background-color: rgba(0.0, 0.0, 0.0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h1>Calculo da área</h1><br>
+        <input type="number" placeholder="Largura" id="width">
+        <input type="number" placeholder="Altura" id="height">
+        <button>Calcular</button>
+    </div>
+    <canvas id="rectangle-canvas" width="500" height="500"></canvas>
+    <script src="./index.js"></script>
+</body>
+</html>

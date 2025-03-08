@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Alvo - Exercício 8</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body style="margin: 0; padding: 0; background-image: url('image.png'); background-size: cover; overflow-y: hidden;">
+    <canvas></canvas>
+    <div style="position: absolute; top: 0; left: 0; color: white; padding: 1rem; pointer-events: none; font-weight: 900;">
+        Pontuação
+        <div id="score">
+            0
+        </div>
+    </div>
+    <div style="position: absolute; top: 0; right: 0; color: white; padding: 0.25rem 1rem; pointer-events: none; font-weight: 900;">
+        <div id="timer"></div>
+    </div>
+    <div class="center no-pointer-events">
+        <div id="game-over">
+            <span>Game Over</span>
+            <table>
+                <tr>
+                    <td>Tempo médio:</td>
+                    <td id="avg-time"></td>
+                    <td>Cliques Totais:</td>
+                    <td id="total-clicks"></td>
+                </tr>
+                <tr>
+                    <td>Acertos:</td>
+                    <td id="hits">3</td>
+                    <td>Erros:</td>
+                    <td id="misses"></td>
+                </tr>
+                <tr>
+                    <td>Precisão média:</td>
+                    <td id="avg-precision"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script type="module" src="./game.js"></script>
+</body>
+</html>

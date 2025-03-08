@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS - Lista de disciplinas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <style>
+            input, #divResultado {
+                border: solid 1px #999999;
+                background-color: #ccc;
+            }
+            input[type="checkbox"] {
+                margin: 1rem;
+            }
+            body {
+                text-align: right;
+                width: 400px;
+                margin: 10px auto auto auto;
+                font-family: Inter, sans-serif;
+            }
+            #divResultado {
+                text-align: center;
+                padding: 10px 20px 20px 20px;
+                margin: 10px auto 10px auto; 
+            }
+            input { text-align: center; }
+            button { width: 70px; }
+        </style>
+    </head>
+    <body>
+        Disciplina:
+        <input type="text" id="txtDisciplina" />
+        <button id="btnInserir">Inserir</button>
+        <div id="divResultado"></div>
+        <button id="btnEliminar">Eliminar</button>
+
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
