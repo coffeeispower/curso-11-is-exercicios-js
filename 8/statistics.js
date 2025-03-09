@@ -24,8 +24,8 @@ export function registerClickTime() {
     lastClickedTimestamp = currentTime;
     if(statistics.avgClickTime == null) {
         statistics.avgClickTime = deltaTime;
-    } else{ 
-        statistics.avgClickTime = ((statistics.avgClickTime * statistics.clicks) + deltaTime) / ++statistics.clicks;
+    } else { 
+        statistics.avgClickTime = ((statistics.avgClickTime * statistics.clicks) + deltaTime) / (1 + statistics.clicks);
     }
     statistics.hits++;
     statistics.clicks++;
