@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Avaliação - Ex 3</title>
+</head>
+<body>
+    
+    <label for="nota">Nota do teste:</label> <input type="number" min="0" max="20" id="nota" value="0">
+    <p id="resultado"></p>
+    <script>
+        /** @type {HTMLInputElement} */
+        const nota = document.getElementById("nota");
+        /** @type {HTMLParagraphElement} */
+        const resultado = document.getElementById("resultado");
+        nota.addEventListener("input", () => {
+            if(isNaN(nota.valueAsNumber)){
+                // Se o input estiver vazio ou não for um número válido, limpa o resultado
+                resultado.innerText = "";
+            } else {
+                // Manter os valores dentro do intervalo 0-20
+                // Alguns browsers como o firefox não forçam rigidamente o
+                // min e o max do input
+                nota.valueAsNumber = Math.min(nota.valueAsNumber, 20);
+                nota.valueAsNumber = Math.max(nota.valueAsNumber, 0);
+                const notaNoModulo = nota.valueAsNumber * 0.15;
+                resultado.innerText = `Teve nota ${nota.valueAsNumber} no teste que corresponde a ${notaNoModulo.toFixed(1)}% na nota do módulo.`;
+            }
+        })
+    </script>
+</body>
+</html>

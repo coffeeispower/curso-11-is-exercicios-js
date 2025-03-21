@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de avaliação - Ex 2</title>
+    <style>
+        #pergunta {
+            font-size: 120%;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo</h1>
+    <p id="pergunta">Em que mês estamos?</p>
+    <p id="mês"></p>
+    <p id="resultado"></p>
+    <form id="form">
+        <input type="number" id="mêsInput" min="1" max="12">
+        <input type="submit" value="Verificar"></input>
+    </form>
+    <script>
+        const form = document.getElementById("form");
+        const monthInput = document.getElementById("mêsInput");
+        const month = document.getElementById("mês");
+        const date = new Date();
+        const resultado = document.getElementById("resultado");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const mêsValue = monthInput.value;
+            resultado.textContent = mêsValue == date.getMonth() + 1 ? "Acertou no mês!" : "Não acertou no mês!";
+            month.textContent = `Estamos no mês: ${date.getMonth() + 1}`;
+        });
+    </script>
+</body>
+</html>
